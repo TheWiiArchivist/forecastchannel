@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Globee</title>
+        <link rel="shortcut icon" href="https://globe.larsenv.xyz/images/globe/poster.webp" type="image/x-icon">
+        <meta http-equiv="refresh" content="500; url=https://globe.larsenv.xyz">
+          <!-- redirect to larsen's globe site that i helped with, so he can get sum traffic too :3 -->
+        <meta name="description" content="A Spinnable Wii Globe created by larsenv, SFX and styles added by ChrisplayzYT/BLOX.">
+        <meta name="keywords" content="ChrisplayzYT/BLOX's website, ChrisplayzBLOX, ChrisplayzYT, ChrisplayzBLOX/YT, Forecast Channel Recreation by ChrisplayzYT/BLOX, Spin the Globe larsenv, globe.larsenv.xyz">
+        <meta name="author" content="ChrisplayzYT/BLOX & larsenv">
+        <link rel="stylesheet" href="/forecastchannel/styles/mainglobe.css">
+        <script src="/forecastchannel/js/forecast-globe.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+        
+    </head>
+    <body id="details">
+        
+
+<style>
+    * {
+        margin:0;
+        padding:0;
+        width:100%;
+        height:100%;
+        transition:.5s ease-in-out;
+    }
+
+    #aboveiframe {
+        background-color:rgba(255, 0, 0, 0.014);
+    }
+    iframe {
+        z-index:0;
+        width:100%;
+        height:100%;
+    }
+</style>
+<body  id="mainpg" onload="showcontrols();">
+<script>
+    function homepage() {
+    var glb = new Audio("/forecastchannel/sound/forecast_back.wav");
+    glb.play();
+    document.getElementById("details").style.backgroundColor="black";
+    document.getElementById("details").style.opacity="0%";
+    document.getElementById("details").style.overflow="hidden";
+    setTimeout(redirhome,900);
+}
+function redirhome() {
+    window.location.href="index.html";
+}
+
+function openlarsen() {
+    document.getElementById("textcredit").style.fontSize="50px";
+    document.getElementById("textcredit").style.wordWrap="break-word";
+    document.getElementById("textcredit").style.Margin="auto";
+    document.getElementById("textcredit").style.width="80%";
+    document.getElementById("textcredit").style.maxWidth="80%";
+    document.getElementById("textcredit").style.display="block";
+    document.getElementById("textcredit").style.float="unset";
+    document.getElementById("textcredit").style.textAlign="center";
+    document.getElementById("frameoglobe").style.display="none";
+    document.getElementById("bt1").style.display="none";
+    document.getElementById("bt2").style.display="none";
+    var hoverfore = new Audio("/forecastchannel/sound/WTR_SE_TENKI.wav");
+    hoverfore.play();
+    setTimeout(redirect,630);
+}
+
+
+function redirect() {
+ window.location.href="https://globe.larsenv.xyz";
+}
+
+</script>
+    
+
+<iframe id="frameoglobe" src="https://globe.larsenv.xyz" width="100%" height="100%" frameborder="0"></iframe>
+
+<div id="aboveiframe" style="justify-content:center; position:absolute; bottom:10px; margin:auto; height:fit-content; z-index:1;">
+    <button id="bt1" onmouseover="hovr();" onclick="homepage();">End</button>
+    <button id="bt2" onmouseover="hovr();" onclick="openlarsen();" style="font-size:18px; word-wrap:break-word;">Visit globe.larsenv.xyz</button>
+    
+</div>
+<div id="aboveiframecred" style="width:fit-content; justify-content:center; position:absolute; bottom:95px; left:0px; height:fit-content; z-index:2;">
+    <p id="textcredit" style="float:left; margin-top:3px; margin-left:10%; max-width:280px; width:280px; text-shadow:2px 2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000;
+">Wii Globe site by Larsenv, sounds added by ChrisplayzYT/BLOX.</p>
+</div>
+
+
+
+
+</body>

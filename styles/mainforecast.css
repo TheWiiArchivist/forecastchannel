@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight:normal;
+    cursor: url("/forecastchannel//images/wiicursorremake.png"), default;
+    scroll-behavior: smooth;
+    transition:.3s ease-in-out;  
+    font-family: 'Wii NTLG PGothic JPN Regular';
+}
+body {
+  background-color:black;
+}
+@font-face {
+    font-family: 'Wii NTLG PGothic JPN Regular';
+    src: url(/font/font2.ttf);
+  }
+
+ 
+  #choose-screen {
+    justify-content:center;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgb(2,164,239);
+    background: linear-gradient(94deg, rgba(2,164,239,1) 0%, rgba(1,104,199,1) 48%, rgba(0,75,180,1) 73%);
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    padding-top:30px;
+    opacity:0%;
+    transition:.5s ease-in-out;
+      }
+
+      #choose-screen button {
+        background-image:url("/forecastchannel//images/border.PNG");
+        background-size:contain;
+        background-repeat:repeat-x;
+      width:20%;
+     height:70px;
+     padding:3px;
+     border-radius:4px;
+     border:none;
+     font-size:25px;
+ background-color:transparent;
+     color:#323232;
+     font-weight:bold;
+     transition:.3s ease-in-out;
+     display:inline-block;
+     background-color:#e8e8e8;
+     box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.473);
+     }
+     #choose-screen button:hover {
+       cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
+        background-image:url("/forecastchannel//images/border_active.png");
+        transition:.1s ease-in-out;
+     background-color:#26b8e8;
+     color:white;
+     box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.623);
+     }
+     #choose-screen button:active {
+      margin-top:5px;
+      cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
+       background-image:url("/forecastchannel//images/border_press.png"); 
+        transition:.3s ease-in-out;   
+       background-color:#26b8e8;
+       color:white;
+     }
+
+     .locations {
+      background-color:rgba(255, 255, 255, 0.253);
+      color:white;
+      font-size:30px;
+      width:100%;
+      margin:auto;
+      margin-bottom:13px;
+    }
+    .locations:hover {
+      background-color:rgba(250, 255, 157, 0.349);
+    }
+
+    #bottombtnloadingpages {
+      width:100%;
+      height:95px;
+      padding-top:10px;
+      padding-bottom:10px;
+      position:fixed;
+      left:0;
+      bottom:0;
+    }
+
+    #boxcontainerpickregionorlocationtxt {
+      padding-left:30px; padding-right:30px;
+      padding-top:25px;
+      padding-bottom:20px; 
+   text-align:center;
+   height:fit-content;
+   width:fit-content;
+   color:white;
+   font-size:25px;
+   border-radius:13px;
+   margin:auto;
+     background: rgb(0,124,184);
+background: linear-gradient(94deg, rgba(0,124,184,1) 0%, rgba(0,74,149,1) 48%, rgba(2,14,114,1) 73%);
+    }
+
+    #pickaregion {
+      max-height:255px;
+      overflow:auto;
+    }
+
+    #pickalocation {
+      max-height:255px;
+      overflow:auto;
+    }
+
+
+    #locationerror {
+      position:absolute; left:0%; top:0; z-index:10; 
+      background-repeat:no-repeat;
+      background-position:center;
+      width:100%; height:100%;
+      transition:.3s ease-in-out;
+      color:white;
+      font-size:22px;
+      text-align:center;
+       display: flex;
+       align-items: center; 
+       justify-content: center; 
+       list-style-type: none;
+
+  }
+      
+      #boxcontainer {
+        text-align:center;
+        color:white;
+        font-size:25px;
+        border-radius:13px;
+        margin:auto;
+          background: rgb(0,124,184);
+background: linear-gradient(94deg, rgba(0,124,184,1) 0%, rgba(0,74,149,1) 48%, rgba(2,14,114,1) 73%);
+      }
+      .errorbox {
+        color:white;
+        font-size:20px;
+        border-radius:13px;
+        padding-left:20px;
+        padding-right:20px;
+        padding-bottom:8px;
+        padding-top:30px;
+        width:fit-content;
+        margin:auto;
+        height:fit-content;
+          background: rgb(0,124,184);
+background: linear-gradient(94deg, rgba(0,124,184,1) 0%, rgba(0,74,149,1) 48%, rgba(2,14,114,1) 73%);
+      }
+
+
+      #loading-screen {
+        justify-content:center;
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgb(2,164,239);
+        background: linear-gradient(94deg, rgba(2,164,239,1) 0%, rgba(1,104,199,1) 48%, rgba(0,75,180,1) 73%);
+        color:white;
+        font-weight:bold;
+        text-align:center;
+        padding-top:30px;
+        opacity:0%;
+        transition:.5s ease-in-out;
+          }
+
+      .loadingbox {
+        margin-bottom:20px;
+        padding-left:130px; padding-right:130px;
+        padding-top:35px;
+        padding-bottom:33px; 
+        height:fit-content;
+        width:fit-content;
+      }
+
+      #sun01 {
+        opacity:0%;
+        animation: changesuns .4s ease-in-out forwards;
+        animation-delay: 1s;
+      }
+      #sun02 {
+        opacity:0%;
+        animation: changesuns .4s ease-in-out forwards ;
+        animation-delay: 1.5s;
+      }
+      #sun03 {
+        opacity:0%;
+        animation: changesuns .4s ease-in-out forwards;
+        animation-delay: 2.0s;
+      }
+      #sun04 {
+        opacity:0%;
+        animation: changesuns .4s ease-in-out forwards ;
+        animation-delay: 2.8s;
+      }
+      #sun05 {
+        opacity:0%;
+        animation: changesuns .4s ease-in-out forwards ;
+        animation-delay: 3.0s;
+      }
+
+      @keyframes changesuns {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+
+
+  
+
+  #error-screen {
+    justify-content:center;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgb(2,164,239);
+    background: linear-gradient(94deg, rgba(2,164,239,1) 0%, rgba(1,104,199,1) 48%, rgba(0,75,180,1) 73%);
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    padding-top:30px;
+    opacity:0%;
+    transition:.5s ease-in-out;
+      }
+
+      .error {
+        color:white;
+        font-size:25px;
+        border-radius:13px;
+        width:fit-content;
+        margin:auto;
+        margin-bottom:20px;
+        height:fit-content;
+        padding-left:30px; padding-right:30px;
+        padding-top:50px;
+        padding-bottom:20px; 
+          background: rgb(0,124,184);
+background: linear-gradient(94deg, rgba(0,124,184,1) 0%, rgba(0,74,149,1) 48%, rgba(2,14,114,1) 73%);
+      }
+
+
+
+      #error-screen-btn {
+          background-image:url("/forecastchannel//images/border.PNG");
+          background-size:contain;
+          background-repeat:repeat-x;
+        width:230px;
+        height:fit-content;
+       padding:3px;
+       border-radius:4px;
+       border:none;
+       font-size:25px;
+   background-color:transparent;
+       color:#323232;
+       font-weight:bold;
+       transition:.1s ease-in-out;
+       display:inline-block;
+       background-color:#e8e8e8;
+       }
+       #error-screen-btn:hover {
+         cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
+          background-image:url("/forecastchannel//images/border_active.png");
+          transition:.1s ease-in-out;
+       background-color:#26b8e8;
+       color:white;
+       }
+       #error-screen-btn:active {
+        margin-top:5px;
+         cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
+          background-image:url("/forecastchannel//images/border_press.png"); 
+          transition:.1s ease-in-out;
+          height:fit-content;
+          background-color:#26b8e8;
+          color:white;
+       }
+  
+
+
+
+          body {
+          
+              color:white;
+              width:100%;
+              height:100%;
+              overflow:hidden;
+            
+          }
+
+          #globetrans {
+            background-image:url("/images/globe/GLOBE-TXT.png");
+            background-repeat:no-repeat;
+            background-position-y:48%;
+            background-position-x:center;
+            background-color:black; position:absolute; width:100%; height:100%;
+            display:none;
+            
+        }
+        
+          #mainpg {
+          
+            color:#323232;
+          
+        }
+
+        #topbuttonsholder {
+          background: rgb(2,164,239);
+          background: linear-gradient(94deg, rgba(2,164,239,1) 0%, rgba(1,104,199,1) 48%, rgba(0,75,180,1) 73%);
+          width:100%; height:fit-content; 
+          margin-bottom:3px;
+          display:block;
+          z-index:100;
+        }
+        #uv-index-screen {
+          z-index:50;
+          display:none; width:100%; background-color:transparent; height:90%; position:relative;
+        }
+
+        #bottombuttonsholder {
+          background: rgb(2,164,239);
+          background: linear-gradient(94deg, rgba(2,164,239,1) 0%, rgba(1,104,199,1) 48%, rgba(0,75,180,1) 73%);
+          width:100%; height:fit-content;
+          margin-top:3px;
+          display:block;
+          z-index:100;
+        }
+
+        #main-screen {
+          max-width:100%; height:100%; width:100%; position:absolute; top:0; left:0;
+            margin:auto;
+            background: rgb(2,164,239);
+            background: linear-gradient(94deg, rgba(2,164,239,1) 0%, rgba(1,104,199,1) 48%, rgba(0,75,180,1) 73%);
+            color:white;
+            transition:.3s ease-in-out;
+            overflow:hidden;
+            color:inherit;
+            border-radius:3px;
+            padding:10px; 
+            text-align: center;
+            z-index:5;
+        }
+        
+            
+
+
+          a {
+            color:#10799c;
+            cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
+        }
+        a:hover {
+            color:#12a3d3;
+            cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
+        }
+
+
+
+
+
+        #main-screen button {
+          background-image:url("/forecastchannel//images/border.PNG");
+          background-size:contain;
+          background-repeat:repeat-x;
+          width:30%;
+          padding:0px;
+          z-index:30px;
+       height:60px;
+       border-radius:4px;
+       border:none;
+       font-size:25px;
+   background-color:transparent;
+       color:#323232;
+       font-weight:bold;
+       transition:.1s ease-in-out;
+       display:inline-block;
+       background-color:#e8e8e8;
+       box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.473);
+       }
+       #main-screen button:hover {
+         cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
+          background-image:url("/forecastchannel//images/border_active.png");
+          transition:.1s ease-in-out;
+       background-color:#26b8e8;
+       color:white;
+       box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.623);
+       }
+       #main-screen button:active {
+         cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
+          background-image:url("/forecastchannel//images/border_press.png"); 
+          transition:.1s ease-in-out;
+          margin-top:5px;
+          background-color:#26b8e8;
+          box-shadow: 3px 3px 5px rgba(197, 197, 197, 0.822);
+          color:white;
+       }

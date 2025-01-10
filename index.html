@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast - ChrisplayzBLOX/YT'S weblinks</title>
+    <link rel="shortcut icon" href="../chris.png" type="image/x-icon">
+    <meta name="description" content="ChrisplayzYT/BLOX's website. links, information and more!">
+    <meta name="keywords" content="ChrisplayzYT/BLOX's website, ChrisplayzBLOX, ChrisplayzYT, ChrisplayzBLOX/YT">
+    <meta name="author" content="ChrisplayzYT/BLOX">
+    <link rel="stylesheet" href="/forecastchannel//styles/mainforecast.css">
+    <audio src="/forecastchannel//sound/globe/forecastloading.mp3" id="loadingsound" loop="" preload></audio>
+    <script src="/forecastchannel/js/forecast.js"></script>
+    <!-- regions are put here cuz they are a looong list -->
+    <script src="/forecastchannel/js/regions.js"></script>
+    <!-- regions are put here cuz they are a looong list -->
+    <!-- locations are put here cuz they are a looong list -->
+    <script src="/forecastchannel/js/locations.js"></script>
+    <!-- locations are put here cuz they are a looong list -->
+
+</head>
+
+<body  onload="initializeRegion();">
+<div id="mainpg">
+
+<audio src="" id="bgmchnl"></audio>
+
+<div id="globetrans" style="display:none;"></div>
+
+
+<div id="choose-screen" style="display:none;">
+
+    <div id="locationerror" onclick="hidecontrols2();" style=" visibility:hidden; opacity:0%; margin-top:-410px;"  >
+           <img src="/forecastchannel//images/controlsbanner.png"  style=" width:630px; height:230px;">
+           <h3 style="position:fixed; margin-top:-180px; font-size:23px;">NOTICE:</h3>
+           <li style="position:fixed; margin-top:20px; font-size:25px;">Locations are currently unavailable. <br> Please check back later.</li>
+           </div>
+   
+   <div id="boxcontainerpickregionorlocationtxt"  style="margin-bottom:13px;"></div>
+   
+   <div id="pickaregion"  style="display:none;">
+   
+        <div id="region01" class="locations" onclick="chooseRegion(1); clik();" onmouseover="hovr();">
+            District of Columbia
+        </div>
+        <div id="region02" class="locations" onclick="chooseRegion(2); clik();" onmouseover="hovr();">
+            Alabama
+        </div>
+        <div id="region03" class="locations" onclick="chooseRegion(3); clik();" onmouseover="hovr();">
+            Alaska
+        </div>
+        <div id="region04" class="locations" onclick="chooseRegion(4); clik();" onmouseover="hovr();">
+            Arizona
+        </div>
+        <div id="region05" class="locations" onclick="chooseRegion(5); clik();" onmouseover="hovr();">
+            California
+        </div>
+        <div id="region06" class="locations" onclick="chooseRegion(6); clik();" onmouseover="hovr();">
+            Colorado
+        </div>
+        <div id="region07" class="locations" onclick="chooseRegion(7); clik();" onmouseover="hovr();">
+            Connecticut
+        </div>
+        <div id="region08" class="locations" onclick="chooseRegion(8); clik();" onmouseover="hovr();">
+            Delaware
+        </div>
+        <div id="region09" class="locations" onclick="chooseRegion(9); clik();" onmouseover="hovr();">
+            Florida
+        </div>
+        <div id="region10" class="locations" onclick="chooseRegion(10); clik();" onmouseover="hovr();">
+            Georgia
+        </div>
+        <div id="region11" class="locations" onclick="chooseRegion(11); clik();" onmouseover="hovr();">
+            Hawaii
+        </div>
+        <div id="region12" class="locations" onclick="chooseRegion(12); clik();" onmouseover="hovr();">
+            Idaho
+        </div>
+        <div id="region13" class="locations" onclick="chooseRegion(13); clik();" onmouseover="hovr();">
+            Illinois
+        </div>
+        <div id="region14" class="locations" onclick="chooseRegion(14); clik();" onmouseover="hovr();">
+            Indiana
+        </div>
+        <div id="region15" class="locations" onclick="chooseRegion(15); clik();" onmouseover="hovr();">
+            Iowa
+        </div>
+        <div id="region16" class="locations" onclick="chooseRegion(16); clik();" onmouseover="hovr();">
+            Kansas
+        </div>
+        <div id="region17" class="locations" onclick="chooseRegion(17); clik();" onmouseover="hovr();">
+            Kentucky
+        </div>
+        <div id="region18" class="locations" onclick="chooseRegion(18); clik();" onmouseover="hovr();">
+            Louisiana
+        </div>
+        <div id="region19" class="locations" onclick="chooseRegion(19); clik();" onmouseover="hovr();">
+            Maine
+        </div>
+        <div id="region20" class="locations" onclick="chooseRegion(20); clik();" onmouseover="hovr();">
+            Michigan
+        </div>
+        <div id="region21" class="locations" onclick="chooseRegion(21); clik();" onmouseover="hovr();">
+            Minnesota
+        </div>
+        <div id="region22" class="locations" onclick="chooseRegion(22); clik();" onmouseover="hovr();">
+            Mississippi
+        </div>
+        <div id="region23" class="locations" onclick="chooseRegion(23); clik();" onmouseover="hovr();">
+            Missouri
+        </div>
+        <div id="region24" class="locations" onclick="chooseRegion(24); clik();" onmouseover="hovr();">
+            Montana
+        </div>
+        <div id="region25" class="locations" onclick="chooseRegion(25); clik();" onmouseover="hovr();">
+            Nebraska
+        </div>
+        <div id="region26" class="locations" onclick="chooseRegion(26); clik();" onmouseover="hovr();">
+            Nevada
+        </div>
+        <div id="region27" class="locations" onclick="chooseRegion(27); clik();" onmouseover="hovr();">
+            New Hampshire
+        </div>
+        <div id="region28" class="locations" onclick="chooseRegion(28); clik();" onmouseover="hovr();">
+            New Jersey
+        </div>
+        <div id="region29" class="locations" onclick="chooseRegion(29); clik();" onmouseover="hovr();">
+            New Mexico
+        </div>
+        <div id="region30" class="locations" onclick="chooseRegion(30); clik();" onmouseover="hovr();">
+            New York
+        </div>
+        <div id="region31" class="locations" onclick="chooseRegion(31); clik();" onmouseover="hovr();">
+            North Carolina
+        </div>
+        <div id="region32" class="locations" onclick="chooseRegion(32); clik();" onmouseover="hovr();">
+            North Dakota
+        </div>
+        <div id="region33" class="locations" onclick="chooseRegion(33); clik();" onmouseover="hovr();">
+            Ohio
+        </div>
+        <div id="region34" class="locations" onclick="chooseRegion(34); clik();" onmouseover="hovr();">
+            Oklahoma
+        </div>
+        <div id="region35" class="locations" onclick="chooseRegion(35); clik();" onmouseover="hovr();">
+            Oregon
+        </div>
+        <div id="region36" class="locations" onclick="chooseRegion(36); clik();" onmouseover="hovr();">
+            Pennsylvania
+        </div>
+        <div id="region37" class="locations" onclick="chooseRegion(37); clik();" onmouseover="hovr();">
+            Rhode Island
+        </div>
+        <div id="region38" class="locations" onclick="chooseRegion(38); clik();" onmouseover="hovr();">
+            South Carolina
+        </div>
+        <div id="region39" class="locations" onclick="chooseRegion(39); clik();" onmouseover="hovr();">
+            South Dakota
+        </div>
+        <div id="region40" class="locations" onclick="chooseRegion(40); clik();" onmouseover="hovr();">
+            Tennessee
+        </div>
+        <div id="region41" class="locations" onclick="chooseRegion(41); clik();" onmouseover="hovr();">
+            Texas
+        </div>
+        <div id="region42" class="locations" onclick="chooseRegion(42); clik();" onmouseover="hovr();">
+            Utah
+        </div>
+        <div id="region43" class="locations" onclick="chooseRegion(43); clik();" onmouseover="hovr();">
+            Vermont
+        </div>
+        <div id="region44" class="locations" onclick="chooseRegion(44); clik();" onmouseover="hovr();">
+            Virginia
+        </div>
+        <div id="region45" class="locations" onclick="chooseRegion(45); clik();" onmouseover="hovr();">
+            Washington
+        </div>
+        <div id="region46" class="locations" onclick="chooseRegion(46); clik();" onmouseover="hovr();">
+            West Virginia
+        </div>
+        <div id="region47" class="locations" onclick="chooseRegion(47); clik();" onmouseover="hovr();">
+            Wisconsin
+        </div>
+        <div id="region48" class="locations" onclick="chooseRegion(48); clik();" onmouseover="hovr();">
+            Wyoming
+        </div>
+        <div id="region49" class="locations" onclick="chooseRegion(49); clik();" onmouseover="hovr();">
+            Puerto Rico
+        </div>
+
+    
+   
+       <div id="locationinstead" class="locations" onclick="choosefromlocations();" onmouseover="hovr();">
+           Choose from a location instead
+       </div>
+   
+   
+   
+   </div>
+   
+   <div id="pickalocation" style="display:none;">
+   
+   
+       <div id="locationinstead" class="locations" onclick="choosefromregions();" onmouseover="hovr();">
+           Choose from a region instead
+       </div>
+   
+   
+   
+   </div>
+   
+   
+   <div id="bottombtnloadingpages">
+     <button style="color:transparent;" onclick="clik();" onmouseover="hovr();">____</button>
+     <button onclick="clik();" onmouseover="hovr();"><img src="/forecastchannel/images/UP.png" alt=""></button>
+     <button onclick="clik();" onmouseover="hovr();"><img src="/forecastchannel/images/DOWN.png" alt=""></button>
+     <button style="color:transparent;" onclick="clik();" onmouseover="hovr();">____</button>
+   </div>
+   
+    </div>
+
+
+<div id="loading-screen" style="display:none;">
+    <div id="boxcontainer" class="loadingbox">One moment, please...</div>
+    <br>
+    <div id="rowofsunz" >
+    <img src="/forecastchannel/images/weather/sunny.png" id="sun01" style="max-width:50px; margin-right:-10px; max-height:50px;" alt="wiisun">
+    <img src="/forecastchannel/images/weather/sunny.png" id="sun02" style="max-width:50px; margin-right:-10px; max-height:50px;" alt="wiisun">
+    <img src="/forecastchannel/images/weather/sunny.png" id="sun03" style="max-width:50px; margin-right:-10px; max-height:50px;" alt="wiisun">
+    <img src="/forecastchannel/images/weather/sunny.png" id="sun04" style="max-width:50px; margin-right:-10px; max-height:50px;" alt="wiisun">
+    <img src="/forecastchannel/images/weather/sunny.png" id="sun05" style="max-width:50px; margin-right:-10px; max-height:50px;" alt="wiisun">
+    </div>
+
+ </div>
+
+
+<div id="error-screen" style="display:none;">
+    <div id="boxcontainer" class="errorbox" style="margin-bottom:15px;">
+        <p>Unable to download the latest information.</p>
+        <br>
+        <p>Error Code:&nbsp;FORE000006</p>
+    </div>
+
+    <button id="error-screen-btn" onclick="closeerror();" onmouseover="hovr();">Back to the <br> Wii Menu</button>
+ </div>
+
+
+<div id="main-screen" style="display:none;">
+
+    <div id="topbuttonsholder" style="display:block;">
+        <button align="center" style="color:transparent;"  onclick="clik();"  onmouseover="hovr();">____</button>
+        <button align="center" id="topbtn01"  onclick=""  onmouseover="hovr();"></button>
+        <button align="center"  onclick="SETTINGS();"  onmouseover="hovr();">Settings</button>
+
+    </div>
+
+      <div id="uv-index-screen" style="display:none;">
+
+        <p id="namee" style="color:white; font-size:25px;">weathernews (loading)</p>
+        <p id="ctry" style="color:white; font-size:25px;">weathernews (loading)</p>
+        <p id="temperature" style="color:white; font-size:25px;">weathernews (loading)</p>
+        <p id="typee" style="color:white; font-size:25px;">weathernews (loading)</p>
+        <p id="lastupd" style="color:white; font-size:25px;">weathernews (loading)</p>
+        <p id="UVVVV" style="color:white; font-size:25px;">weathernews (loading)</p>
+        
+
+       </div> 
+
+       <div id="bottombuttonsholder"  style="display:block;">
+        <button align="center" id="warp1btn"    onclick="homepage();"  onmouseover="hovr();">Wii Menu</button>
+        <button align="center" id="bottombtn01" onclick="" onmouseover="hovr();"></button>
+        <button  onclick="globetransform();" align="center" id="globebtn"   onmouseover="hovr();">Globe</button>
+
+</div>
+
+
+
+
+    
+</div>
+</body>
