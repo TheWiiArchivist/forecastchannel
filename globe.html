@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Globee</title>
         <link rel="shortcut icon" href="https://globe.larsenv.xyz/images/globe/poster.webp" type="image/x-icon">
-        <meta http-equiv="refresh" content="500; url=https://globe.larsenv.xyz">
+        <meta http-equiv="refresh" content="50; url=https://globe.larsenv.xyz">
           <!-- redirect to larsen's globe site that i helped with, so he can get sum traffic too :3 -->
         <meta name="description" content="A Spinnable Wii Globe created by larsenv, SFX and styles added by ChrisplayzYT/BLOX.">
         <meta name="keywords" content="ChrisplayzYT/BLOX's website, ChrisplayzBLOX, ChrisplayzYT, ChrisplayzBLOX/YT, Forecast Channel Recreation by ChrisplayzYT/BLOX, Spin the Globe larsenv, globe.larsenv.xyz">
@@ -42,6 +42,8 @@
     function homepage() {
     var glb = new Audio("/forecastchannel/sound/forecast_back.wav");
     glb.play();
+    document.getElementById('frameoglobe').src = "https://globe.larsenv.xyz";
+    document.getElementById("frameoglobe").style.opacity="50%";
     document.getElementById("details").style.backgroundColor="black";
     document.getElementById("details").style.opacity="0%";
     document.getElementById("details").style.overflow="hidden";

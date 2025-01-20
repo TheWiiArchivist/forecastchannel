@@ -20,4 +20,6 @@ function clik() {
     clk.play();
 }
 
+
+
 // more code in in globe.larsenv.xyz, i removed all of the code here to clean it xD

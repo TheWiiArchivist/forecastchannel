@@ -30,8 +30,22 @@ body {
     transition:.5s ease-in-out;
       }
 
+
+      #settings-screen {
+        justify-content:center;
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgb(2,164,239);
+        background: linear-gradient(94deg, rgba(2,164,239,1) 0%, rgba(1,104,199,1) 48%, rgba(0,75,180,1) 73%);
+        color:white;
+        font-weight:bold;
+        text-align:center;
+        padding-top:30px;
+        transition:.5s ease-in-out;
+          }
+
       #choose-screen button {
-        background-image:url("/forecastchannel//images/border.PNG");
+        background: rgb(237,237,237);
+        background: linear-gradient(180deg, rgba(237,237,237,1) 0%, rgba(206,206,206,1) 42%, rgba(189,189,189,1) 43%, rgba(231,231,231,1) 81%);
         background-size:contain;
         background-repeat:repeat-x;
       width:20%;
@@ -50,7 +64,8 @@ body {
      }
      #choose-screen button:hover {
        cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
-        background-image:url("/forecastchannel//images/border_active.png");
+       background: rgb(39,188,237);
+       background: linear-gradient(180deg, rgba(39,188,237,1) 0%, rgba(34,163,206,1) 42%, rgba(32,150,190,1) 43%, rgba(41,198,251,1) 81%);
         transition:.1s ease-in-out;
      background-color:#26b8e8;
      color:white;
@@ -59,7 +74,8 @@ body {
      #choose-screen button:active {
       margin-top:5px;
       cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
-       background-image:url("/forecastchannel//images/border_press.png"); 
+      background: rgb(31,174,221);
+      background: linear-gradient(180deg, rgba(31,174,221,1) 0%, rgba(27,148,189,1) 42%, rgba(25,141,180,1) 43%, rgba(17,188,246,1) 81%);
         transition:.3s ease-in-out;   
        background-color:#26b8e8;
        color:white;
@@ -77,15 +93,7 @@ body {
       background-color:rgba(250, 255, 157, 0.349);
     }
 
-    #bottombtnloadingpages {
-      width:100%;
-      height:95px;
-      padding-top:10px;
-      padding-bottom:10px;
-      position:fixed;
-      left:0;
-      bottom:0;
-    }
+
 
     #boxcontainerpickregionorlocationtxt {
       padding-left:30px; padding-right:30px;
@@ -246,7 +254,8 @@ background: linear-gradient(94deg, rgba(0,124,184,1) 0%, rgba(0,74,149,1) 48%, r
 
 
       #error-screen-btn {
-          background-image:url("/forecastchannel//images/border.PNG");
+        background: rgb(237,237,237);
+        background: linear-gradient(180deg, rgba(237,237,237,1) 0%, rgba(206,206,206,1) 42%, rgba(189,189,189,1) 43%, rgba(231,231,231,1) 81%);
           background-size:contain;
           background-repeat:repeat-x;
         width:230px;
@@ -264,7 +273,8 @@ background: linear-gradient(94deg, rgba(0,124,184,1) 0%, rgba(0,74,149,1) 48%, r
        }
        #error-screen-btn:hover {
          cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
-          background-image:url("/forecastchannel//images/border_active.png");
+         background: rgb(39,188,237);
+         background: linear-gradient(180deg, rgba(39,188,237,1) 0%, rgba(34,163,206,1) 42%, rgba(32,150,190,1) 43%, rgba(41,198,251,1) 81%);
           transition:.1s ease-in-out;
        background-color:#26b8e8;
        color:white;
@@ -272,7 +282,8 @@ background: linear-gradient(94deg, rgba(0,124,184,1) 0%, rgba(0,74,149,1) 48%, r
        #error-screen-btn:active {
         margin-top:5px;
          cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
-          background-image:url("/forecastchannel//images/border_press.png"); 
+         background: rgb(31,174,221);
+         background: linear-gradient(180deg, rgba(31,174,221,1) 0%, rgba(27,148,189,1) 42%, rgba(25,141,180,1) 43%, rgba(17,188,246,1) 81%);
           transition:.1s ease-in-out;
           height:fit-content;
           background-color:#26b8e8;
@@ -307,27 +318,47 @@ background: linear-gradient(94deg, rgba(0,124,184,1) 0%, rgba(0,74,149,1) 48%, r
           
         }
 
-        #topbuttonsholder {
-          background: rgb(2,164,239);
-          background: linear-gradient(94deg, rgba(2,164,239,1) 0%, rgba(1,104,199,1) 48%, rgba(0,75,180,1) 73%);
-          width:100%; height:fit-content; 
-          margin-bottom:3px;
-          display:block;
-          z-index:100;
-        }
+
         #uv-index-screen {
           z-index:50;
           display:none; width:100%; background-color:transparent; height:90%; position:relative;
         }
 
-        #bottombuttonsholder {
-          background: rgb(2,164,239);
-          background: linear-gradient(94deg, rgba(2,164,239,1) 0%, rgba(1,104,199,1) 48%, rgba(0,75,180,1) 73%);
-          width:100%; height:fit-content;
-          margin-top:3px;
-          display:block;
-          z-index:100;
-        }
+        
+
+     button {
+      background: rgb(237,237,237);
+background: linear-gradient(180deg, rgba(237,237,237,1) 0%, rgba(206,206,206,1) 42%, rgba(189,189,189,1) 43%, rgba(231,231,231,1) 81%);
+        background-size:contain;
+        background-repeat:repeat-x;
+        margin-right:-3px;
+        margin-left:0;
+     border-radius:4px;
+     border:none;
+     font-size:25px;
+ background-color:transparent;
+     color:#323232;
+     font-weight:bold;
+     transition:.5s ease-in-out;
+     display:inline-block;
+     background-color:#e8e8e8;
+     }
+     button:hover {
+      background: rgb(39,188,237);
+      background: linear-gradient(180deg, rgba(39,188,237,1) 0%, rgba(34,163,206,1) 42%, rgba(32,150,190,1) 43%, rgba(41,198,251,1) 81%);
+        transition:.3s ease-in-out;
+     color:white;
+     }
+     button:active {
+      margin-top:-3px;
+       cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
+       background: rgb(31,174,221);
+background: linear-gradient(180deg, rgba(31,174,221,1) 0%, rgba(27,148,189,1) 42%, rgba(25,141,180,1) 43%, rgba(17,188,246,1) 81%);
+        transition:.2s ease-in-out;
+        color:white;
+     }
+
+
 
         #main-screen {
           max-width:100%; height:100%; width:100%; position:absolute; top:0; left:0;
@@ -340,7 +371,7 @@ background: linear-gradient(94deg, rgba(0,124,184,1) 0%, rgba(0,74,149,1) 48%, r
             color:inherit;
             border-radius:3px;
             padding:10px; 
-            text-align: center;
+
             z-index:5;
         }
         
@@ -360,39 +391,4 @@ background: linear-gradient(94deg, rgba(0,124,184,1) 0%, rgba(0,74,149,1) 48%, r
 
 
 
-        #main-screen button {
-          background-image:url("/forecastchannel//images/border.PNG");
-          background-size:contain;
-          background-repeat:repeat-x;
-          width:30%;
-          padding:0px;
-          z-index:30px;
-       height:60px;
-       border-radius:4px;
-       border:none;
-       font-size:25px;
-   background-color:transparent;
-       color:#323232;
-       font-weight:bold;
-       transition:.1s ease-in-out;
-       display:inline-block;
-       background-color:#e8e8e8;
-       box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.473);
-       }
-       #main-screen button:hover {
-         cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
-          background-image:url("/forecastchannel//images/border_active.png");
-          transition:.1s ease-in-out;
-       background-color:#26b8e8;
-       color:white;
-       box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.623);
-       }
-       #main-screen button:active {
-         cursor: url("/forecastchannel//images/wiicursorremake_hover.png"), pointer;
-          background-image:url("/forecastchannel//images/border_press.png"); 
-          transition:.1s ease-in-out;
-          margin-top:5px;
-          background-color:#26b8e8;
-          box-shadow: 3px 3px 5px rgba(197, 197, 197, 0.822);
-          color:white;
-       }
+      

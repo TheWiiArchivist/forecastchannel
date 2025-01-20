@@ -1,3 +1,5 @@
+
+
 function homepage() {
     var glb = new Audio("/forecastchannel/sound/forecast_back.wav");
     glb.play();
@@ -20,6 +22,10 @@ function globetransform() {
     document.getElementById("globetrans").style.display="block";
     setTimeout(globeopen,900);
 }
+
+
+
+
 function globeopen() {
     window.location.href="globe.html";
 }
@@ -42,10 +48,12 @@ var loadingfore = new Audio("/forecastchannel/bgm/loading.wav");
 var foreerror = new Audio("/forecastchannel/sound/forecast_error.wav");
 var closerror = new Audio("/forecastchannel/sound/clickerror.wav");
 var loadingfinished = new Audio("/forecastchannel/sound/forecast_enter.wav");
-var forecastbgm = new Audio("/forecastchannel/bgm/bgm_night.mp3");
+var forecastbgm = new Audio("");
+var forecastsettings = new Audio("/forecastchannel/bgm/settings.mp3");
 chooselocationmusic.loop = true;
 loadingfore.loop = true;
 forecastbgm.loop = true;
+forecastsettings.loop = true;
 
 function chooseregion() {
     showregions();
@@ -102,7 +110,7 @@ function finishloading() {
     document.getElementById("choose-screen").style.display="none";
     document.getElementById('loading-screen').style.display="none";
     document.getElementById("main-screen").style.display="block";
-    showscreen01();
+    showscreen00(); // show current screen
 }
 
 function forecastchannelunabletoreachinfo() {
@@ -131,39 +139,38 @@ function closeerror() {
 // weather API stuff, thx to radical
 
 function getWeatherAPI(city) {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=f500f3df2d2d4047811133430231605&q=${city}`)
+    fetch(`https://larsenv.net`)
     .then(response => response.json())
         .then(data => {
             loadingfinished.play();
             forecastbgm.pause();
 
-            // thx to larsens bgm code from globe.larsenv.xyz (his project i helped with), it plays local day if day and local night if night xD
-            const weather1 = document.getElementById('namee');
-            weather1.textContent = `Region: ${data.location.region}`;
-
             const weather2 = document.getElementById('ctry');
-            weather2.textContent = `Country: ${data.current.country}`;
+            weather2.innerHTML = `${data.current.country}`;
 
             const weather3 = document.getElementById('temperature');
-            weather3.textContent = `Temperature: ${data.current.temp_f}°F`;
+            weather3.innerHTML = `${data.current.temp_f}°F`;
 
             const weather4 = document.getElementById('typee');
-            weather4.textContent = `Current: ${data.current.condition.text}`;
+            weather4.innerHTML = `${data.current.condition.text}`;
 
             const weather5 = document.getElementById('lastupd');
-            weather5.textContent = `Last Updated: ${data.current.last_updated}`;
+            weather5.innerHTML = `As of ${data.current.last_updated}`;
 
             const weather6 = document.getElementById('UVVVV');
-            weather6.textContent = `UV: ${data.current.uv}`;
-            
-        
+            weather6.innerHTML = `${data.current.uv}`;
 
+            const weather7 = document.getElementById('windmph');
+            weather7.innerHTML = `${data.current.wind_mph}`;
+
+            
+            
  // thx to larsens bgm code from globe.larsenv.xyz, it plays local day if day and local night if night xD
             const currentHour = new Date().getHours();
             if (currentHour >= 5 && currentHour < 18) {
-                forecastbgm = new Audio("/forecastchannel/bgm/bgm_night.mp3");
-            } else {
                 forecastbgm = new Audio("/forecastchannel/bgm/bgm_day.mp3");
+            } else {
+                forecastbgm = new Audio("/forecastchannel/bgm/bgm_night.mp3");
             }
               // thx to larsens bgm code from globe.larsenv.xyz (his project i helped with), it plays local day if day and local night if night xD
 
@@ -181,20 +188,72 @@ function getWeatherAPI(city) {
 
 //getWeatherAPI('hmm');
 
-function showscreen01() {
-    document.getElementById("uv-index-screen").style.display="block";
-    document.getElementById("topbtn01").innerHTML="____";
+// UV Index
+function showscreen00() {
+    document.getElementById("uv-index-screen").style.display="none";
+    document.getElementById("current-screen").style.display="block";
+    document.getElementById("topbtn01").innerHTML="####";
     document.getElementById("topbtn01").style.color="transparent";
    document.getElementById("topbtn01").onclick = function() {
-    showscreen02();
+
+    };
+
+    document.getElementById("bottombtn01").innerHTML="Current";
+   // document.getElementById("topbtn01").style.color="transparent";
+   document.getElementById("bottombtn01").onclick = function() {
+    showscreen00();
     };
 
 }
 
-function SETTINGS() {
-    clik();
-    setTimeout(changeregionagain,300);
+// UV Index
+
+// current
+function showscreen00() {
+    document.getElementById("uv-index-screen").style.display="none";
+    document.getElementById("current-screen").style.display="block";
+    document.getElementById("topbtn01").innerHTML="UV Index";
+   // document.getElementById("topbtn01").style.color="transparent";
+   document.getElementById("topbtn01").onclick = function() {
+    showscreenUV();
+    };
+
+    document.getElementById("bottombtn01").innerHTML="Today";
+   // document.getElementById("topbtn01").style.color="transparent";
+   document.getElementById("bottombtn01").onclick = function() {
+    showscreen01();
+    };
+
 }
+
+// current
+
+
+
+function SETTINGS() {
+    document.getElementById("main-screen").style.display="none";
+    document.getElementById("settings-screen").style.display="block";
+    pausebgm();
+    forecastsettings.play();
+    forecastsettings.currentTime=0;
+}
+function pausebgm() {
+    forecastbgm.pause();
+ }
+
+ function playbgm() {
+    forecastbgm.play();
+ }
+
+ function returnmainpg() {
+    document.getElementById("main-screen").style.display="block";
+    document.getElementById("settings-screen").style.display="none";
+    playbgm();
+    forecastsettings.pause();
+ }
+
+
+
 
 function changeregionagain() {
     const cookies = document.cookie.split("; ");
