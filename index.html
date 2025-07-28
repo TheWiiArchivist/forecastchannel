@@ -21,7 +21,7 @@
 
 </head>
 
-<body  onload="showLoadingScreen()" >
+<body  onload="showLoadingScreen()" onclick='var foreerror = new Audio("/forecastchannel/sound/forecast_error.wav"); foreerror.play(); document.getElementById("error-screen").style.opacity="100%";'>
 <div id="mainpg">
 
 <audio src="" id="bgmchnl"></audio>
@@ -236,7 +236,7 @@
 
 
 <div id="error-screen" style="display:block;">
-    <script>var foreerror = new Audio("/forecastchannel/sound/forecast_error.wav"); foreerror.play(); document.getElementById("boxcontainer").style.opacity="100%";</script>
+    <script>var foreerror = new Audio("/forecastchannel/sound/forecast_error.wav"); foreerror.play(); document.getElementById("error-screen").style.opacity="100%";</script>
     <div id="boxcontainer" class="errorbox" style="margin-bottom:15px;" onclick="foreerror.play();">
         <p>Temporally on hold.</p>
         <br>
