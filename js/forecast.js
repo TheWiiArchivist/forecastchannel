@@ -9,7 +9,7 @@ function homepage() {
     setTimeout(redirhome,900);
 }
 function redirhome() {
-    window.location.href="https://chrisplayzyt.github.io";
+    window.location.href="https://thewiiarchivist.github.io";
 }
 
 function globetransform() {
