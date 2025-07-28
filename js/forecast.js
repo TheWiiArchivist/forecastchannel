@@ -3,9 +3,8 @@
 function homepage() {
     var glb = new Audio("/forecastchannel/sound/forecast_back.wav");
     glb.play();
-    document.getElementById("mainpg").style.backgroundColor="black";
-    document.getElementById("mainpg").style.opacity="0%";
-    document.getElementById("mainpg").style.overflow="hidden";
+    document.getElementById("error-screen").style.backgroundColor="black";
+    document.getElementById("error-screen").style.opacity="0%";
     setTimeout(redirhome,900);
 }
 function redirhome() {
