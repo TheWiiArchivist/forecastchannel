@@ -235,9 +235,10 @@
  </div>
 
 
-<div id="error-screen" style="display:none;">
-    <div id="boxcontainer" class="errorbox" style="margin-bottom:15px;">
-        <p>Unable to download the latest information.</p>
+<div id="error-screen" style="display:block;">
+    <script>var foreerror = new Audio("/forecastchannel/sound/forecast_error.wav"); foreerror.play();</script>
+    <div id="boxcontainer" class="errorbox" style="margin-bottom:15px;" onclick="foreerror.play();">
+        <p>Temporally on hold.</p>
         <br>
         <p>Error Code:&nbsp;FORE000006</p>
     </div>
