@@ -21,7 +21,7 @@
 
 </head>
 
-<body  onload="showLoadingScreen()" onclick='var foreerror = new Audio("/forecastchannel/sound/forecast_error.wav"); foreerror.play(); document.getElementById("error-screen").style.opacity="100%";'>
+<body  onload="showLoadingScreen()" onclick='document.getElementById("error-screen").style.opacity="100%";'>
 <div id="mainpg">
 
 <audio src="" id="bgmchnl"></audio>
@@ -243,7 +243,7 @@
         <p>Error Code:&nbsp;FORE000006</p>
     </div>
 
-    <button id="error-screen-btn" onclick="closeerror();" onmouseover="hovr();">Back to the <br> Wii Menu</button>
+    <button id="error-screen-btn" onclick="homepage()" onmouseover="hovr();">Back to the <br> Wii Menu</button>
  </div>
 
 
