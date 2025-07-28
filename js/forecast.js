@@ -93,6 +93,7 @@ function choosefromregions() {
 let settingweath;
 
 function showLoadingScreen() {
+    /*
     chooselocationmusic.pause();
     document.getElementById("choose-screen").style.display="none";
     document.getElementById("mainpg").style.backgroundColor="black";
@@ -104,6 +105,17 @@ function showLoadingScreen() {
     loadingScreen.style.opacity = '100%';
 
    settingweath = setTimeout(finishloading, 2585);
+   */
+    chooselocationmusic.pause();
+    document.getElementById("choose-screen").style.display="none";
+    document.getElementById("mainpg").style.backgroundColor="black";
+    loadingfore.play();
+
+    document.getElementById("main-screen").style.display="none";
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.display = 'block';
+    loadingScreen.style.opacity = '100%';
+forecastchannelunabletoreachinfo();
 }
 function finishloading() {
     loadingfore.pause();
@@ -139,7 +151,7 @@ function closeerror() {
 // weather API stuff, thx to radical
 
 function getWeatherAPI(city) {
-    fetch(`https://larsenv.net`)
+    /* fetch(``)*/
     .then(response => response.json())
         .then(data => {
             loadingfinished.play();
