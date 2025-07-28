@@ -13,8 +13,11 @@ forecastsettings.loop = true;
 
 
 function homepage() {
+/*
     var glb = new Audio("/forecastchannel/sound/forecast_back.wav");
     glb.play();
+*/
+    closerror.play();
     document.getElementById("error-screen").style.backgroundColor="black";
     document.getElementById("error-screen").style.opacity="0%";
     setTimeout(redirhome,900);
